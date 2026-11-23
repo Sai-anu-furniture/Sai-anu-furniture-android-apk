@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6b3f2a">
+<title>SAI ANU FURNITURE</title>
+<style>
+:root{--brown:#6b3f2a;--cream:#fff8f0;--ink:#29231f;--gold:#d6a45d}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--cream);color:var(--ink)}
+header{background:var(--brown);color:white;padding:22px 18px;text-align:center}
+header h1{margin:0;font-size:23px;letter-spacing:1px}header p{margin:7px 0 0;color:#f5dfc8}
+.contact-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.contact-links a{color:inherit}
+.sofa-photo{width:100%;height:160px;object-fit:contain;display:block;background:#faf7f2;border-radius:10px}
+#sofaOverlay{width:68%;left:16%;top:40%;filter:drop-shadow(0 8px 7px #0006)}
+#sofaOverlay img{width:100%;height:auto;display:block;pointer-events:none;user-select:none}
+.color-note{font-size:12px;color:#75685f}
+nav{display:flex;overflow:auto;background:#fff;position:sticky;top:0;box-shadow:0 2px 8px #0001;z-index:2}
+nav button{flex:1;min-width:68px;border:0;background:white;padding:14px 8px;color:var(--brown);font-weight:bold}
+nav button.active{background:#f0dfd0;border-bottom:3px solid var(--brown)}
+#roomPreview{position:relative;min-height:260px;background:#eee;border-radius:12px;overflow:hidden;display:grid;place-items:center;margin-top:12px;touch-action:pan-y}
+#roomPhoto{display:block;width:100%;max-height:480px;object-fit:contain}
+#sofaOverlay{position:absolute;width:65%;left:17.5%;top:42%;cursor:grab;touch-action:none;filter:drop-shadow(0 7px 5px #0005);user-select:none}
+#sofaOverlay:active{cursor:grabbing}
+.preview-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px}.preview-tools label{margin-top:8px}
+main{max-width:760px;margin:auto;padding:16px}.panel{display:none}.panel.active{display:block}
+.hero{background:linear-gradient(135deg,#70442e,#bd8b5d);color:white;padding:25px;border-radius:16px}
+.hero h2{font-size:27px;margin:0 0 8px}.btn{display:inline-block;background:var(--brown);color:white;border:0;padding:12px 16px;border-radius:9px;text-decoration:none;font-weight:bold;margin:5px 4px 5px 0}
+.btn.light{background:white;color:var(--brown)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.card{background:white;border-radius:13px;padding:14px;box-shadow:0 2px 10px #0000000c}
+.sofa{height:95px;border-radius:10px;background:linear-gradient(145deg,#e8d2bc,#b98761);display:grid;place-items:center;font-size:48px}
+h2{color:var(--brown)}label{display:block;font-weight:bold;margin:12px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d8c9bd;border-radius:8px;background:white;font:inherit}
+textarea{min-height:85px}form{background:white;padding:16px;border-radius:13px}
+.small{color:#75685f;font-size:13px}.request{border-left:4px solid var(--gold);margin:10px 0}
+footer{text-align:center;padding:22px;color:#75685f;font-size:13px}
+</style></head>
+<body>
+<header><h1>SAI ANU FURNITURE</h1><p>Sofa Manufacturing • Sales • Repair</p></header>
+<nav>
+<button class="active" data-tab="home">Home</button><button data-tab="sofas">Sofas</button><button data-tab="order">Order</button><button data-tab="repair">Repair</button><button data-tab="tryhome">Try at Home</button><button data-tab="admin">Admin</button>
+</nav>
+<main>
+<section id="home" class="panel active">
+<div class="hero"><h2>Comfort made for your home.</h2><p>Custom sofa manufacturing, sales, sofa repair and sofa cleaning services in and around Patancheru.</p>
+<a class="btn light" href="https://wa.me/919177304055" target="_blank">WhatsApp Us</a>
+<a class="btn light" href="tel:+919177304055">Call Now</a></div>
+<h2>Our Services</h2><div class="grid">
+<div class="card">🛋️ <b>Sofa Manufacturing</b><p class="small">Custom designs and sizes.</p></div>
+<div class="card">🧰 <b>Sofa Repair & Cleaning</b><p class="small">Sofa repairs, deep cleaning, stain removal and fabric care.</p></div>
+<div class="card">🏠 <b>Sales & Marketing</b><p class="small">Enquire about available models.</p></div></div>
+<h2>Contact</h2><div class="card"><b>SAI ANU FURNITURE</b><p>📞 <a href="tel:+919177304055">+91 91773 04055</a></p><p>✉️ <a href="mailto:Sai.yadav.1257@gmail.com">Sai.yadav.1257@gmail.com</a></p><p>📍 IDA Patancheru, Telangana</p><div class="contact-links"><a class="btn" href="https://wa.me/919177304055" target="_blank">WhatsApp</a><a class="btn" href="mailto:Sai.yadav.1257@gmail.com">Email us</a><a class="btn" href="https://maps.google.com/?q=IDA+Patancheru+Telangana" target="_blank">Open Map</a></div></div>
+</section>
+<section id="sofas" class="panel"><h2>Sofa Catalogue</h2><div class="grid">
+<div class="card"><img class="sofa-photo" src="images/sofa-3-seater.png" alt="Three seater upholstered sofa"><h3>3 Seater Sofa</h3><p class="small">Classic family seating. Custom fabric and colour.</p><button class="btn" onclick="prefill('3 Seater Sofa')">Enquire</button></div>
+<div class="card"><div class="sofa">🛋️</div><h3>L-Shape Sofa</h3><p class="small">Space-friendly corner seating.</p><button class="btn" onclick="prefill('L-Shape Sofa')">Enquire</button></div>
+<div class="card"><div class="sofa">🛋️</div><h3>2 Seater Sofa</h3><p class="small">Compact and comfortable.</p><button class="btn" onclick="prefill('2 Seater Sofa')">Enquire</button></div>
+<div class="card"><div class="sofa">🪑</div><h3>Custom Sofa</h3><p class="small">Share your preferred size and design.</p><button class="btn" onclick="prefill('Custom Sofa')">Enquire</button></div>
+</div></section>
+<section id="order" class="panel"><h2>Custom Sofa Enquiry</h2><form id="orderForm">
+<label>Your name</label><input name="name" required>
+<label>Phone number</label><input name="phone" type="tel" required>
+<label>Sofa type</label><select id="sofaType" name="type"><option>3 Seater Sofa</option><option>L-Shape Sofa</option><option>2 Seater Sofa</option><option>Custom Sofa</option></select>
+<label>Size / colour / requirements</label><textarea name="details" placeholder="Tell us your preferred size, fabric and colour"></textarea>
+<button class="btn">Submit Enquiry</button></form><p class="small">Submitting opens WhatsApp with your enquiry details. You can also email us at Sai.yadav.1257@gmail.com.</p></section>
+<section id="repair" class="panel"><h2>Book Sofa Repair & Cleaning</h2><p class="small">Book sofa repair, deep cleaning and fabric care at your home.</p><form id="repairForm">
+<label>Your name</label><input name="name" required>
+<label>Phone number</label><input name="phone" type="tel" required>
+<label>Select service</label><select name="type"><optgroup label="Sofa Repair"><option>Foam and cushion replacement</option><option>Fabric replacement / reupholstery</option><option>Wooden frame repair</option><option>Spring repair</option><option>Complete sofa renovation</option><option>L-shape sofa repair</option><option>Recliner repair</option></optgroup><optgroup label="Sofa Cleaning"><option>Basic sofa cleaning</option><option>Deep sofa cleaning</option><option>Fabric shampoo cleaning</option><option>Stain removal</option><option>Odour removal</option></optgroup><option>Other</option></select>
+<label>Address / problem details</label><textarea name="details" required placeholder="Enter your area and describe the repair or cleaning required"></textarea>
+<button class="btn">Submit Repair / Cleaning Request</button></form><p class="small">Submitting opens WhatsApp with your repair/cleaning request. Doorstep inspection subject to availability.</p></section>
+<section id="tryhome" class="panel"><h2>Try Sofa at Home</h2>
+<p>Upload a clear photo of your living room, choose a sofa style and position the sofa preview in your room before you enquire.</p>
+<div class="card"><label for="roomUpload">1. Upload your living room photo</label><input id="roomUpload" type="file" accept="image/*"><p class="small">Use a front-facing room photo with enough floor space. Your photo is previewed on this device.</p>
+<label for="homeSofaType">2. Choose sofa model</label><select id="homeSofaType"><option>3 Seater Sofa</option><option>L-Shape Sofa (preview sample)</option><option>2 Seater Sofa (preview sample)</option><option>Custom Sofa</option></select>
+<div id="roomPreview"><p id="previewHint" class="small">Your room photo and sofa preview will appear here.</p><img id="roomPhoto" alt="Your living room" hidden>
+<div id="sofaOverlay" hidden><img id="sofaOverlayImage" src="images/sofa-3-seater.png" alt="Selected sofa preview"></div></div>
+<div class="preview-tools"><div><label for="sofaScale">Sofa size</label><input id="sofaScale" type="range" min="35" max="95" value="65"></div><div><label for="sofaColor">Sofa colour</label><select id="sofaColor"><option value="#c18b65">Tan</option><option value="#777b80">Grey</option><option value="#b6a18a">Beige</option><option value="#536b59">Olive green</option><option value="#7d4650">Maroon</option><option value="beige">Beige</option><option value="grey">Grey</option><option value="olive">Olive green</option><option value="blue">Blue</option><option value="maroon">Maroon</option><option value="charcoal">Charcoal</option></select></div></div><p class="color-note">Colour preview uses photo filters; final fabric shade may vary. Ask us for a fabric sample before ordering.</p>
+<p class="small">Tip: Drag the realistic sofa photo to position it in your room. Change its colour and size. This is a visual mock-up, not a precise 3D/AI room rendering.</p>
+<button class="btn" type="button" id="sendHomeEnquiry">Send this sofa enquiry</button></div></section>
+<section id="admin" class="panel"><h2>Admin – Demo Requests</h2><p class="small">This screen is not password protected. It is for local demonstration only.</p><div id="requests"></div><button class="btn" onclick="renderRequests()">Refresh</button><button class="btn" onclick="clearRequests()">Clear Demo Requests</button></section>
+</main><footer>SAI ANU FURNITURE · IDA Patancheru, Telangana · +91 91773 04055 · Sai.yadav.1257@gmail.com</footer>
+<script>
+const tabs=document.querySelectorAll('nav button');
+tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById(b.dataset.tab).classList.add('active');if(b.dataset.tab==='admin')renderRequests()}));
+function prefill(type){document.querySelector('[data-tab="order"]').click();document.getElementById('sofaType').value=type}
+function saveRequest(kind,form){const data=Object.fromEntries(new FormData(form).entries());const all=JSON.parse(localStorage.getItem('saiRequests')||'[]');all.unshift({kind,...data,status:'New',created:new Date().toLocaleString()});localStorage.setItem('saiRequests',JSON.stringify(all));alert('Thank you! Your request has been saved in this demo app. Please call or WhatsApp us to confirm.');form.reset()}
+function sendFormToWhatsApp(kind,form){const d=Object.fromEntries(new FormData(form).entries());const msg=[kind,'Name: '+(d.name||''),'Phone: '+(d.phone||''),'Type: '+(d.type||''),'Details: '+(d.details||''),'Email: Sai.yadav.1257@gmail.com'].join('\n');window.open('https://wa.me/919177304055?text='+encodeURIComponent(msg),'_blank');}
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();sendFormToWhatsApp('SAI ANU FURNITURE - Sofa Enquiry',e.target)});
+document.getElementById('repairForm').addEventListener('submit',e=>{e.preventDefault();sendFormToWhatsApp('SAI ANU FURNITURE - Repair / Cleaning Request',e.target)});
+const roomUpload=document.getElementById('roomUpload'), roomPhoto=document.getElementById('roomPhoto'), sofaOverlay=document.getElementById('sofaOverlay'), previewHint=document.getElementById('previewHint');
+roomUpload.addEventListener('change',()=>{const f=roomUpload.files&&roomUpload.files[0];if(!f)return;if(!f.type.startsWith('image/')){alert('Please choose an image file.');return}const reader=new FileReader();reader.onload=()=>{roomPhoto.src=reader.result;roomPhoto.hidden=false;sofaOverlay.hidden=false;previewHint.hidden=true};reader.readAsDataURL(f)});
+document.getElementById('sofaScale').addEventListener('input',e=>{const w=Number(e.target.value);sofaOverlay.style.width=w+'%';sofaOverlay.style.left=(100-w)/2+'%'});
+const sofaOverlayImage=document.getElementById('sofaOverlayImage');
+const colorFilters={beige:'none',grey:'grayscale(1) contrast(.92)',olive:'sepia(.65) saturate(1.25) hue-rotate(55deg)',blue:'sepia(.55) saturate(2.2) hue-rotate(165deg)',maroon:'sepia(.7) saturate(2.5) hue-rotate(300deg)',charcoal:'grayscale(1) brightness(.58)'};
+document.getElementById('sofaColor').addEventListener('change',e=>{sofaOverlayImage.style.filter=colorFilters[e.target.value]||'none'});
+let drag=null;sofaOverlay.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,left:parseFloat(sofaOverlay.style.left||'17.5'),top:parseFloat(sofaOverlay.style.top||'42')};sofaOverlay.setPointerCapture(e.pointerId)});sofaOverlay.addEventListener('pointermove',e=>{if(!drag)return;const box=document.getElementById('roomPreview').getBoundingClientRect();sofaOverlay.style.left=Math.max(0,Math.min(100-parseFloat(sofaOverlay.style.width||'65'),drag.left+(e.clientX-drag.x)/box.width*100))+'%';sofaOverlay.style.top=Math.max(0,Math.min(85,drag.top+(e.clientY-drag.y)/box.height*100))+'%'});sofaOverlay.addEventListener('pointerup',()=>drag=null);sofaOverlay.addEventListener('pointercancel',()=>drag=null);
+document.getElementById('sendHomeEnquiry').addEventListener('click',()=>{if(roomPhoto.hidden){alert('Please upload your living room photo first.');return}const type=document.getElementById('homeSofaType').value;const colour=document.getElementById('sofaColor').value;const size=document.getElementById('sofaScale').value+'% preview width';const msg='Hello SAI ANU FURNITURE, I tried your sofa in my room photo. Sofa: '+type+'. Colour: '+colour+'. Size: '+size+'. I will attach/send my room photo in this WhatsApp chat. Please share price and details.';window.open('https://wa.me/919177304055?text='+encodeURIComponent(msg),'_blank')});
+function renderRequests(){const items=JSON.parse(localStorage.getItem('saiRequests')||'[]');const box=document.getElementById('requests');box.innerHTML=items.length?'':'<p>No requests yet.</p>';items.forEach((r,i)=>{const d=document.createElement('div');d.className='card request';d.innerHTML='<b>'+r.kind+'</b><p>'+esc(r.name)+' · '+esc(r.phone)+'</p><p>'+esc(r.type||'')+'</p><p class="small">'+esc(r.details||'')+'<br>'+esc(r.created)+'</p><label>Status</label>';const s=document.createElement('select');['New','Contacted','Quoted','Completed'].forEach(v=>{const o=document.createElement('option');o.value=v;o.textContent=v;o.selected=r.status===v;s.appendChild(o)});s.onchange=()=>{const a=JSON.parse(localStorage.getItem('saiRequests')||'[]');a[i].status=s.value;localStorage.setItem('saiRequests',JSON.stringify(a))};d.appendChild(s);box.appendChild(d)})}
+function esc(v){return String(v||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function clearRequests(){if(confirm('Delete all demo requests on this device?')){localStorage.removeItem('saiRequests');renderRequests()}}
+</script></body></html>
